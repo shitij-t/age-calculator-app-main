@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;1,400;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body class="font-poppins bg-Offwhite">
+    <main class="grid justify-center h-screen px-8">
+      <div
+        class="bg-White min-h-80 md:min-h-96 m-auto rounded-2xl rounded-br-[100px]"
+      >
+        <div class="p-6">
+          <form action="/">
+            <div class="flex md:gap-12 gap-4 border-b border-Smokeygrey">
+              <label for="day" class="block flex-1">
+                <span class="block pb-1 text-xs font-bold text-Smokeygrey"
+                  >DAY</span
+                >
+                <input
+                  class="max-w-16 md:max-w-[96px] text-base md:text-lg font-bold border border-Smokeygrey rounded p-2 md:placeholder:text-lg placeholder:text-base placeholder:font-bold"
+                  type="number"
+                  id="day"
+                  placeholder="DD"
+                />
+                <span
+                  id="dayError"
+                  class="invisible block p-2 text-lightRed text-xs italic font-extralight"
+                  >Must be a valid day</span
+                >
+              </label>
+              <label for="month" class="block flex-1">
+                <span class="block pb-1 text-xs font-bold text-Smokeygrey"
+                  >MONTH</span
+                >
+                <input
+                  class="max-w-16 md:max-w-[96px] text-base md:text-lg font-bold border border-Smokeygrey rounded p-2 md:placeholder:text-lg placeholder:text-base placeholder:font-bold"
+                  type="number"
+                  id="month"
+                  placeholder="MM"
+                />
+                <span
+                  id="monthError"
+                  class="invisible block p-2 text-lightRed text-xs italic font-extralight"
+                  >Must be a valid month</span
+                >
+              </label>
+              <label for="year" class="block flex-1">
+                <span class="block pb-1 text-xs font-bold text-Smokeygrey"
+                  >YEAR</span
+                >
+                <input
+                  class="max-w-16 md:max-w-[96px] text-base md:text-lg font-bold border border-Smokeygrey rounded p-2 md:placeholder:text-lg placeholder:text-base placeholder:font-bold"
+                  type="number"
+                  placeholder="YYYY"
+                  id="year"
+                />
+                <span
+                  id="yearError"
+                  class="invisible block p-2 text-lightRed text-xs italic font-extralight"
+                  >Must be in the past</span
+                >
+              </label>
+            </div>
+            <div class="relative mb-8">
+              <button
+                type="button"
+                onclick="verifyInput()"
+                class="block absolute right-[40%] md:right-0 top-[-26px]"
+              >
+                <img
+                  src="./assets/images/icon-arrow.svg"
+                  alt="Submit"
+                  class="h-14 bg-purple stroke-Offblack rounded-full p-2 aspect-square"
+                />
+              </button>
+            </div>
+          </form>
+          <div
+            class="results text-5xl md:text-6xl font-extrabold italic max-w-fit"
+          >
+            <p class="">
+              <span id="yearsDisplay" class="text-purple tracking-wide"
+                >--</span
+              >
+              years
+            </p>
+            <p class="">
+              <span id="monthsDisplay" class="text-purple tracking-wide"
+                >--</span
+              >
+              months
+            </p>
+            <p class="">
+              <span id="daysDisplay" class="text-purple tracking-wide">--</span>
+              days
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="script.js"></script>
+</html>
